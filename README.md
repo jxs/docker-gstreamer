@@ -11,18 +11,10 @@ Following components are present:
 * libnice (newer version from git)
 * WPE WebKit (newer version from upstream release)
 
-GStreamer and components are tracking upstream master branches (with minor fixes on top) and are usually updated a few times a month.
+Forked from [github.com/restreamio/docker-gstreamer](https://github.com/restreamio/docker-gstreamer), GStreamer and components are tracking upstream master branches.
 There is a chance after 1.18 release there will be additional builds against stable releases as well, we'll see.
 
 Base OS is Ubuntu 20.04 LTS.
-
-There are 4 images pushed to Docker Hub:
-* restreamio/gstreamer:latest-dev-with-source - includes unoptimized build with debug symbols and even source code it was built with
-* restreamio/gstreamer:latest-dev - same as above, but without source code for development purposes
-* restreamio/gstreamer:latest-prod - optimized (`-O3` and `LTO`) build without debug symbols for production purposes
-* restreamio/gstreamer:latest-prod-dbg - optimized (`-O2` only) build with debug symbols included for production purposes with better debugging experience
-
-There are also above tags prefixed with build date for stable reference.
 
 ## Contribution
 Feel free to create issues and send pull requests, they are highly appreciated!

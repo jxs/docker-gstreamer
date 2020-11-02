@@ -1,29 +1,29 @@
 FROM restreamio/gstreamer:latest-dev-dependencies
 
-ARG GSTREAMER_REPOSITORY=https://gitlab.freedesktop.org/nazar-pc/gstreamer.git
-ARG GSTREAMER_CHECKOUT=5e768b4b58540ed2084feb9b80231fc641c4c331
+ARG GSTREAMER_REPOSITORY=https://gitlab.freedesktop.org/gstreamer/gstreamer.git
+ARG GSTREAMER_CHECKOUT=master
 
 ARG LIBWPE_VERSION=1.8.0
 ARG WPEBACKEND_FDO_VERSION=1.8.0
 ARG WPEWEBKIT_VERSION=2.30.2
 
 ARG LIBNICE_REPOSITORY=https://gitlab.freedesktop.org/libnice/libnice.git
-ARG LIBNICE_CHECKOUT=804a4c095ff689939e2f21fbede5f1ced18667a6
+ARG LIBNICE_CHECKOUT=master
 
-ARG GST_PLUGINS_BASE_REPOSITORY=https://gitlab.freedesktop.org/nazar-pc/gst-plugins-base.git
-ARG GST_PLUGINS_BASE_CHECKOUT=630a8cc28e09bb096475ebc472dd12e6acc58ef5
+ARG GST_PLUGINS_BASE_REPOSITORY=https://gitlab.freedesktop.org/gstreamer/gst-plugins-base.git
+ARG GST_PLUGINS_BASE_CHECKOUT=master
 
-ARG GST_PLUGINS_BAD_REPOSITORY=https://gitlab.freedesktop.org/nazar-pc/gst-plugins-bad.git
-ARG GST_PLUGINS_BAD_CHECKOUT=5cfd4f648f6ddfc2eedec78601e047b1e056c6a6
+ARG GST_PLUGINS_BAD_REPOSITORY=https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad.git
+ARG GST_PLUGINS_BAD_CHECKOUT=master
 
-ARG GST_PLUGINS_GOOD_REPOSITORY=https://gitlab.freedesktop.org/nazar-pc/gst-plugins-good.git
-ARG GST_PLUGINS_GOOD_CHECKOUT=c9b5268f42819102909b65cfec1cfc9135721a1c
+ARG GST_PLUGINS_GOOD_REPOSITORY=https://gitlab.freedesktop.org/gstreamer/gst-plugins-good.git
+ARG GST_PLUGINS_GOOD_CHECKOUT=master
 
 ARG GST_PLUGINS_UGLY_REPOSITORY=https://gitlab.freedesktop.org/gstreamer/gst-plugins-ugly.git
-ARG GST_PLUGINS_UGLY_CHECKOUT=aaa4acb2dd9772c2032e2b0b3f9866b9820605a5
+ARG GST_PLUGINS_UGLY_CHECKOUT=master
 
 ARG GST_LIBAV_REPOSITORY=https://gitlab.freedesktop.org/gstreamer/gst-libav.git
-ARG GST_LIBAV_CHECKOUT=b6acd99239247aeb3dbb433508316ba709f550bb
+ARG GST_LIBAV_CHECKOUT=master
 
 COPY docker/build-gstreamer/download /
 
