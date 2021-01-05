@@ -9,9 +9,9 @@ fi
 # Make sure to always have fresh base image
 docker pull ubuntu:20.10
 # Install dev dependencies
-docker build -t restreamio/gstreamer:dev-dependencies -f Dockerfile-dev-dependencies .
+docker build -t jxs01/gstreamer:dev-dependencies -f Dockerfile-dev-dependencies .
 # Download source code
-docker build -t restreamio/gstreamer:dev-downloaded \
+docker build -t jxs01/gstreamer:dev-downloaded \
     --build-arg GSTREAMER_REPOSITORY=https://gitlab.freedesktop.org/gstreamer/gstreamer.git \
     --build-arg GSTREAMER_CHECKOUT=$1 \
     --build-arg GST_PLUGINS_BASE_REPOSITORY=https://gitlab.freedesktop.org/gstreamer/gst-plugins-base.git \
@@ -26,12 +26,12 @@ docker build -t restreamio/gstreamer:dev-downloaded \
     --build-arg GST_LIBAV_CHECKOUT=$1 \
     -f Dockerfile-dev-downloaded .
 # Build dev image with source code included
-docker build -t restreamio/gstreamer:$1-dev-with-source -f Dockerfile-dev-with-source .
+# docker build -t jxs01/gstreamer:$1-dev-with-source -f Dockerfile-dev-with-source .
 # Build dev image with just binaries
-docker build -t restreamio/gstreamer:$1-dev -f Dockerfile-dev .
+# docker build -t jxs01/gstreamer:$1-dev -f Dockerfile-dev .
 # Build base production image with necessary dependencies
-docker build -t restreamio/gstreamer:prod-base -f Dockerfile-prod-base .
+docker build -t jxs01/gstreamer:prod-base -f Dockerfile-prod-base .
 # Build production image optimized binaries and no debug symbols (-O3 LTO)
-docker build -t restreamio/gstreamer:$1-prod -f Dockerfile-prod .
+docker build -t jxs01/gstreamer:$1-prod -f Dockerfile-prod .
 # Build production image optimized binaries and debug symbols
-docker build -t restreamio/gstreamer:$1-prod-dbg -f Dockerfile-prod-dbg .
+# docker build -t jxs01/gstreamer:$1-prod-dbg -f Dockerfile-prod-dbg .

@@ -1,4 +1,4 @@
-FROM restreamio/gstreamer:dev-downloaded
+FROM jxs01/gstreamer:dev-downloaded
 
 ENV DEBUG=true
 ENV OPTIMIZATIONS=false

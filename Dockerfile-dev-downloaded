@@ -1,11 +1,7 @@
-FROM restreamio/gstreamer:dev-dependencies
+FROM jxs01/gstreamer:dev-dependencies
 
 ARG GSTREAMER_REPOSITORY=https://gitlab.freedesktop.org/nazar-pc/gstreamer.git
 ARG GSTREAMER_CHECKOUT=ad816b7546f49d0037b752358561f53c074c045f
-
-ARG LIBWPE_VERSION=1.8.0
-ARG WPEBACKEND_FDO_VERSION=1.8.0
-ARG WPEWEBKIT_VERSION=2.30.3
 
 ARG LIBNICE_REPOSITORY=https://gitlab.freedesktop.org/libnice/libnice.git
 ARG LIBNICE_CHECKOUT=1dbe38d6abe74c415bf4ae44190980c61874a04f
